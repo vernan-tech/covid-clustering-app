@@ -73,7 +73,7 @@ st.markdown(
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('covid.csv')
+        df = pd.read_csv('covid.zip')
         cols_to_use = df.select_dtypes(include=['float64', 'int64']).columns.tolist()
         return df, cols_to_use
     except FileNotFoundError:
